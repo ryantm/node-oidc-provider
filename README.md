@@ -1,3 +1,13 @@
+# replit specific changes
+
+This version of oidc-provider has the following changes:
+1. It uses esbuild to package a CommonJS distribution of the code.
+2. It exposes "instance" so we can dynamically add clients to the memory store
+
+To deploy a new version:
+1. bump version in package.json
+2. `npm run build && npm pack && npm publish`
+
 # oidc-provider
 
 This module provides an OAuth 2.0 ([RFC 6749][oauth2]) Authorization Server with support for OpenID Connect ([OIDC][openid-connect]) and many
@@ -60,7 +70,7 @@ your CI.
 
 ## Certification
 
-[<img width="184" height="96" align="right" src="https://cdn.jsdelivr.net/gh/panva/node-oidc-provider@acd3ebf2f5ebbb5605463cb681a1fb2ab9742ace/OpenID_Certified.png" alt="OpenID Certification">][openid-certified-link]  
+[<img width="184" height="96" align="right" src="https://cdn.jsdelivr.net/gh/panva/node-oidc-provider@acd3ebf2f5ebbb5605463cb681a1fb2ab9742ace/OpenID_Certified.png" alt="OpenID Certification">][openid-certified-link]
 Filip Skokan has [certified][openid-certified-link] that [oidc-provider][npm-url]
 conforms to the following profiles of the OpenID Connect™ protocol.
 
